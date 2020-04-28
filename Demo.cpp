@@ -11,7 +11,9 @@
 #include "solver.hpp"
 
 using namespace std;
-using solver::solve, solver::RealVariable, solver::ComplexVariable;
+using solver::solve;
+using solver::RealVariable;
+using  solver::ComplexVariable;
 
 int main() {
     RealVariable x;
