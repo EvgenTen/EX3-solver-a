@@ -42,32 +42,32 @@ TEST_CASE("Test")
      CHECK(solve(7*x-4 == 17) ==3);
 
     
-     CHECK(solve((x^2) == 1) ==1); 
-     CHECK(solve((x^2) == 4) ==2);
-     CHECK(solve((x^2) == 9) ==3);
-     CHECK(solve((x^2) == 16) ==4);
-     CHECK(solve((x^2) == 25) ==5);
-     CHECK(solve((x^2) == 36) ==6);
-     CHECK(solve((x^2) == 49) ==7);
-     CHECK(solve((x^2) == 64) ==8);
-     CHECK(solve((x^2) == 81) ==9);
-     CHECK(solve((x^2) == 100) ==10); 
+     CHECK(solve((x^2) == 1) ==1 || solve((x^2) == 1) ==-1); 
+     CHECK(solve((x^2) == 4) ==2 || solve((x^2) == 4) ==-2);
+     CHECK(solve((x^2) == 9) ==3 || solve((x^2) == 9) ==-3);
+     CHECK(solve((x^2) == 16) ==4 || solve((x^2) == 16) ==-4);
+     CHECK(solve((x^2) == 25) ==5 || solve((x^2) == 25) ==-5);
+     CHECK(solve((x^2) == 36) ==6 || solve((x^2) == 36) ==-6);
+     CHECK(solve((x^2) == 49) ==7 || solve((x^2) == 49) ==-7);
+     CHECK(solve((x^2) == 64) ==8 || solve((x^2) == 64) ==-8);
+     CHECK(solve((x^2) == 81) ==9 || solve((x^2) == 81) ==-9);
+     CHECK(solve((x^2) == 100) ==10 || solve((x^2) == 100) ==-10); 
 
-     CHECK(solve((x^2) == 121) ==11); 
-     CHECK(solve((x^2) == 1936) ==44);
-     CHECK(solve((x^2) == 9801) ==99);
-     CHECK(solve((x^2) == 1089) ==33);
-     CHECK(solve((x^2) == 484) ==22);
-     CHECK(solve((x^2) == 3025) ==55);
-     CHECK(solve((x^2) == 4356) ==66);
-     CHECK(solve((x^2) == 5929) ==77);
-     CHECK(solve((x^2) == 7744) ==88);
-     CHECK(solve((x^2) == 12321) ==111);  
+     CHECK(solve((x^2) == 121) ==11 || solve((x^2) == 121) ==-11); 
+     CHECK(solve((x^2) == 1936) ==44 || solve((x^2) == 1936) ==-44);
+     CHECK(solve((x^2) == 9801) ==99 || solve((x^2) == 9801) ==-99);
+     CHECK(solve((x^2) == 1089) ==33 || solve((x^2) == 1089) ==-33);
+     CHECK(solve((x^2) == 484) ==22 || solve((x^2) == 484) ==-22);
+     CHECK(solve((x^2) == 3025) ==55 || solve((x^2) == 3025) ==-55);
+     CHECK(solve((x^2) == 4356) ==66 || solve((x^2) == 4356) ==-66);
+     CHECK(solve((x^2) == 5929) ==77|| solve((x^2) == 5929) ==-77);
+     CHECK(solve((x^2) == 7744) ==88 || solve((x^2) == 7744) ==-88);
+     CHECK(solve((x^2) == 12321) ==111 || solve((x^2) == 12321) ==-111);  
 
-     CHECK(solve((x^2) + 2*x + 4.0 == 20 + 6.0*x/2 - x) ==4);   
-     CHECK(solve((x^2) + 3*x + 6.0 == 12 + 6.0*x/2 - x) ==2);//16
-     CHECK(solve((x^2) + 2*x + 5.0 == 27 + 3.0*x/2 - x) ==4);//29
-     CHECK(solve((x^2) + 5*x + 7.0 == 18 + 5.0*x/2 - x) ==2);//21
+     CHECK(solve((x^2) + 2*x + 4.0 == 20 + 6.0*x/2 - x) ==4 ||solve((x^2) + 2*x + 4.0 == 20 + 6.0*x/2 - x) ==-4);   
+     CHECK(solve((x^2) + 3*x + 6.0 == 12 + 6.0*x/2 - x) ==2 || solve((x^2) + 3*x + 6.0 == 12 + 6.0*x/2 - x) ==-3);//16
+     CHECK(solve((x^2) + 2*x + 5.0 == 27 + 3.0*x/2 - x) ==4 || solve((x^2) + 2*x + 5.0 == 27 + 3.0*x/2 - x) ==-5.5);//29
+     CHECK(solve((x^2) + 5*x + 7.0 == 18 + 5.0*x/2 - x) ==2 || solve((x^2) + 5*x + 7.0 == 18 + 5.0*x/2 - x) ==-5.5);//21
      CHECK(solve((x^2) + 5*x + 1.0 == 22 + 4.0*x/2 - x) ==3);//25
      CHECK(solve((x^2) + 9*x + 3.0 == 51 + 4.0*x/2 - x) ==4);//55
      CHECK(solve((x^2) + 1*x + 1.0 == 1 + 6.0*x/2 - x) ==1);//3
